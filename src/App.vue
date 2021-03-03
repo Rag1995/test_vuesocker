@@ -1,18 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Hello 首頁</h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  data: () => ({
+    //
+  }),
+  mounted() {
+    console.log('Page Mounted');
+  },
+  sockets: {
+    connect() {
+      console.log('server connected');
+    },
+  },
 }
 </script>
 
